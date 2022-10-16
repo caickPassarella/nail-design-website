@@ -5,24 +5,39 @@ import {
   HomeSubheader,
   HomeImage,
   HomeWrapper,
-  HomeTextWrapper,
+  HomeSocials,
+  HomeIcon,
+  HomeText,
+  SocialWrapper,
 } from "./HomepageElements";
 
-import { Hand } from "../../images";
+import { Hand, InstagramIcon, WhatsappIcon } from "../../images";
 
 const Homepage = () => {
   const header = "Vanessa Pires\nNail Designer";
   const subheader = "Estética e bem estar";
+  const whatsapp = "(12) 97627-0471";
+  const instagram = "@naildesigntest123";
 
   return (
     <>
       <HomeContainer>
         <Navbar />
         <HomeWrapper>
-          <HomeTextWrapper>
+          <div>
             <HomeHeader>{header}</HomeHeader>
             <HomeSubheader>{subheader}</HomeSubheader>
-          </HomeTextWrapper>
+            <HomeSocials>
+              <SocialWrapper>
+                <HomeIcon src={InstagramIcon} />
+                <HomeText>{instagram}</HomeText>
+              </SocialWrapper>
+              <SocialWrapper>
+                <HomeIcon src={WhatsappIcon} />
+                <HomeText>{whatsapp}</HomeText>
+              </SocialWrapper>
+            </HomeSocials>
+          </div>
           <HomeImage src={Hand} />
         </HomeWrapper>
       </HomeContainer>

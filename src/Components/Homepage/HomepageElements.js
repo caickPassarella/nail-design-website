@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const HomeContainer = styled.div`
-  //background-color: #ffd7d8;
   background: linear-gradient(
     to bottom right,
     #ffd7d8 0%,
@@ -34,9 +33,26 @@ export const HomeSubheader = styled.h2`
   margin-top: 5px;
 `;
 
-export const HomeTextWrapper = styled.div`
+export const HomeText = styled.p`
+  font-size: 15px;
+  margin-right: 50px;
+  color: #5a5a5a;
+  font-size: 16px;
+`;
+
+export const SocialWrapper = styled.div`
   display: flex;
-  flex-direction: column;
+  align-items: center;
+`;
+
+export const HomeSocials = styled.div`
+  display: flex;
+  margin-top: 20px;
+`;
+
+export const HomeIcon = styled.img`
+  width: 38px;
+  margin-right: 10px;
 `;
 
 export const HomeImage = styled.img`

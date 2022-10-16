@@ -25,6 +25,6 @@ export const NavLink = styled.a`
 
   :hover {
     font-weight: bold;
-    color: #fff4f5;
+    color: #0f0f0f;
   }
 `;
