@@ -1,4 +1,6 @@
-import Navbar from "../Navbar";
+import { Navbar } from "../Navbar";
+import { ServiceInfo } from "../ServiceInfo";
+import { Button } from "../Button";
 import {
   HomeContainer,
   HomeHeader,
@@ -9,9 +11,24 @@ import {
   HomeIcon,
   HomeText,
   SocialWrapper,
+  HomeService,
+  HomeServiceHeader,
+  HomeServiceText,
+  HomeServiceWrapper,
+  ButtonWrapper,
 } from "./HomepageElements";
 
-import { Hand, InstagramIcon, WhatsappIcon } from "../../images";
+import {
+  Hand,
+  InstagramIcon,
+  WhatsappIcon,
+  Manicure,
+  NailArt,
+  NailPolish,
+  NailPolish2,
+  NailStar,
+  Nail,
+} from "../../images";
 
 const Homepage = () => {
   const header = "Vanessa Pires\nNail Designer";
@@ -41,6 +58,56 @@ const Homepage = () => {
           <HomeImage src={Hand} />
         </HomeWrapper>
       </HomeContainer>
+      <HomeServiceWrapper>
+        <HomeServiceHeader>Serviços</HomeServiceHeader>
+        <HomeServiceText>
+          Entre em contato diretamente pelo whatsapp!
+        </HomeServiceText>
+        <HomeService>
+          <ServiceInfo
+            img={Manicure}
+            header="Unha em acrílico"
+            currency="R$"
+            price="120,00"
+          />
+          <ServiceInfo
+            img={NailArt}
+            header="Unha em gel"
+            currency="R$"
+            price="120,00"
+          />
+          <ServiceInfo
+            img={NailPolish}
+            header="Manicure"
+            currency="R$"
+            price="120,00"
+          />
+        </HomeService>
+        <HomeService>
+          <ServiceInfo
+            img={NailPolish2}
+            header="Limpeza"
+            currency="R$"
+            price="120,00"
+          />
+          <ServiceInfo
+            img={NailStar}
+            header="Alongamento"
+            currency="R$"
+            price="120,00"
+          />
+          <ServiceInfo
+            img={Nail}
+            header="Pedicure"
+            currency="R$"
+            price="120,00"
+          />
+        </HomeService>
+        <ButtonWrapper>
+          <Button text="Mais informações" />
+          <Button text="Entre em contato!" highlight={true} />
+        </ButtonWrapper>
+      </HomeServiceWrapper>
     </>
   );
 };

@@ -15,7 +15,7 @@ export const HomeWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   align-items: flex-start;
-  margin-left: 100px;
+  margin-left: 150px;
   margin-top: 100px;
 `;
 
@@ -35,6 +35,7 @@ export const HomeSubheader = styled.h2`
 
 export const HomeText = styled.p`
   font-size: 15px;
+  letter-spacing: 3px;
   margin-right: 50px;
   color: #5a5a5a;
   font-size: 16px;
@@ -56,6 +57,38 @@ export const HomeIcon = styled.img`
 `;
 
 export const HomeImage = styled.img`
-  width: 630px;
+  height: 750px;
   transform: scaleX(-1);
+`;
+
+export const HomeServiceWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+`;
+
+export const HomeService = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+`;
+
+export const HomeServiceHeader = styled(HomeSubheader)`
+  color: #333333;
+`;
+
+export const HomeServiceText = styled.p`
+  font-size: 18px;
+  color: #333333;
+  letter-spacing: 3px;
+  margin-top: 8px;
+  margin-bottom: 30px;
+`;
+
+export const ButtonWrapper = styled(HomeService)`
+  justify-content: space-around;
+  width: 650px;
 `;

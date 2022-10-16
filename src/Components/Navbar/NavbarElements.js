@@ -5,7 +5,7 @@ export const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   height: 100px;
-  padding: 0 100px;
+  padding: 0 120px;
 `;
 
 export const NavUl = styled.ul`

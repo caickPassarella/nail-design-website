@@ -1,6 +1,6 @@
 import { Nav, NavUl, NavLi, NavHeader, NavLink } from "./NavbarElements";
 
-const Navbar = () => {
+export const Navbar = () => {
   return (
     <Nav>
       <NavUl>
@@ -25,5 +25,3 @@ const Navbar = () => {
     </Nav>
   );
 };
-
-export default Navbar;
