@@ -14,8 +14,10 @@ import NailPolish from "./icons/nail-polish.png";
 import NailPolish2 from "./icons/nail-polish-2.png";
 import NailStar from "./icons/nail-star.png";
 import Nail from "./icons/nail.png";
+import Next from "./icons/next.png";
 
 export {
+  Next,
   Hand,
   InstagramIcon,
   WhatsappIcon,

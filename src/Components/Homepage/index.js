@@ -39,6 +39,20 @@ const Homepage = () => {
   const instagram = "@naildesigntest123";
   const portraitInfo =
     "Designer with many years of experience, specially in the nails industry. I've attended more than 50 customers with all sorts of services.with many years of experience, specially in the nails industry.";
+  const imageList = [
+    Nail1,
+    Nail2,
+    Nail3,
+    Nail4,
+    Nail5,
+    Nail6,
+    Nail4,
+    Nail4,
+    Nail4,
+    Nail4,
+    Nail4,
+    Nail4,
+  ];
 
   return (
     <>
@@ -113,7 +127,7 @@ const Homepage = () => {
       />
       <HomeSectionWrapper>
         <HomeSectionHeader>Galeria de fotos</HomeSectionHeader>
-        <Gallery image={[Nail1, Nail2, Nail3, Nail4, Nail5, Nail6]} />
+        <Gallery image={imageList} />
       </HomeSectionWrapper>
     </>
   );
