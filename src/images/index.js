@@ -1,4 +1,10 @@
 import Hand from "./hand-homepage.png";
+import Nail1 from "./nail1.png";
+import Nail2 from "./nail2.png";
+import Nail3 from "./nail3.png";
+import Nail4 from "./nail4.png";
+import Nail5 from "./nail5.png";
+import Nail6 from "./nail6.png";
 
 import InstagramIcon from "./icons/instagram-black.png";
 import WhatsappIcon from "./icons/whatsapp-black.png";
@@ -19,4 +25,10 @@ export {
   NailPolish2,
   NailStar,
   Nail,
+  Nail1,
+  Nail2,
+  Nail3,
+  Nail4,
+  Nail5,
+  Nail6,
 };

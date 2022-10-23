@@ -3,6 +3,7 @@ import { ServiceInfo } from "../ServiceInfo";
 import { Button } from "../Button";
 import { Portrait } from "../Portrait";
 import { Socials } from "../Socials";
+import { Gallery } from "../Gallery";
 import {
   HomeBackground,
   HomeHeader,
@@ -11,9 +12,9 @@ import {
   HomeWrapper,
   SocialsContainer,
   HomeService,
-  HomeServiceHeader,
-  HomeServiceText,
-  HomeServiceWrapper,
+  HomeSectionHeader,
+  HomeSectionText,
+  HomeSectionWrapper,
   ButtonWrapper,
 } from "./HomepageElements";
 
@@ -28,6 +29,8 @@ import {
   NailStar,
   Nail,
 } from "../../images";
+
+import { Nail1, Nail2, Nail3, Nail4, Nail5, Nail6 } from "../../images";
 
 const Homepage = () => {
   const header = "Vanessa Pires\nNail Designer";
@@ -53,11 +56,11 @@ const Homepage = () => {
           <HomeImage src={Hand} />
         </HomeWrapper>
       </HomeBackground>
-      <HomeServiceWrapper>
-        <HomeServiceHeader>Serviços</HomeServiceHeader>
-        <HomeServiceText>
+      <HomeSectionWrapper>
+        <HomeSectionHeader>Serviços</HomeSectionHeader>
+        <HomeSectionText>
           Entre em contato diretamente pelo whatsapp!
-        </HomeServiceText>
+        </HomeSectionText>
         <HomeService>
           <ServiceInfo
             img={Manicure}
@@ -102,12 +105,16 @@ const Homepage = () => {
           <Button text="Mais informações" />
           <Button text="Entre em contato!" highlight={true} />
         </ButtonWrapper>
-      </HomeServiceWrapper>
+      </HomeSectionWrapper>
       <Portrait
         name="Vanessa Pires"
         text={portraitInfo}
         icons={[InstagramIcon, WhatsappIcon]}
       />
+      <HomeSectionWrapper>
+        <HomeSectionHeader>Galeria de fotos</HomeSectionHeader>
+        <Gallery image={[Nail1, Nail2, Nail3, Nail4, Nail5, Nail6]} />
+      </HomeSectionWrapper>
     </>
   );
 };

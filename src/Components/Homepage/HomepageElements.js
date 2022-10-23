@@ -30,7 +30,6 @@ export const HomeSubheader = styled.h2`
   font-size: 25px;
   color: #5a5a5a;
   letter-spacing: 7px;
-  margin-top: 5px;
 `;
 
 export const SocialsContainer = styled.div`
@@ -43,7 +42,7 @@ export const HomeImage = styled.img`
   transform: scaleX(-1);
 `;
 
-export const HomeServiceWrapper = styled.div`
+export const HomeSectionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,15 +57,15 @@ export const HomeService = styled.div`
   padding: 40px;
 `;
 
-export const HomeServiceHeader = styled(HomeSubheader)`
+export const HomeSectionHeader = styled(HomeSubheader)`
   color: #333333;
+  margin-bottom: 12px;
 `;
 
-export const HomeServiceText = styled.p`
+export const HomeSectionText = styled.p`
   font-size: 18px;
   color: #333333;
   letter-spacing: 3px;
-  margin-top: 8px;
   margin-bottom: 30px;
 `;
 

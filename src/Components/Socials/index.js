@@ -1,12 +1,25 @@
 import PropTypes from "prop-types";
-import { SocialWrapper, SocialIcon, SocialText } from "./SocialsElements";
+import {
+  SocialWrapper,
+  SocialIcon,
+  SocialText,
+  SocialLink,
+} from "./SocialsElements";
 
 export const Socials = (props) => {
   return (
     <>
       <SocialWrapper>
-        <SocialIcon src={props.icon} />
-        {props.text ? <SocialText>{props.text}</SocialText> : <></>}
+        <SocialLink href="/">
+          <SocialIcon src={props.icon} />
+        </SocialLink>
+        {props.text ? (
+          <SocialLink href="/">
+            <SocialText>{props.text}</SocialText>
+          </SocialLink>
+        ) : (
+          <></>
+        )}
       </SocialWrapper>
     </>
   );
