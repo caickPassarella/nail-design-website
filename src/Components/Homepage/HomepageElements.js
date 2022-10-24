@@ -73,3 +73,18 @@ export const ButtonWrapper = styled(HomeService)`
   justify-content: space-around;
   width: 650px;
 `;
+
+export const ContactWrapper = styled.div`
+  display: flex;
+  height: 50vh;
+  width: 100%;
+`;
+
+export const ContactSection = styled.div`
+  background-color: #fff4f5;
+  flex: 1;
+`;
+
+export const ContactSectionWrapper = styled(HomeSectionWrapper)`
+  padding: 40px;
+`;

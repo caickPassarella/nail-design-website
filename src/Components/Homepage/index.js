@@ -4,6 +4,7 @@ import { Button } from "../Button";
 import { Portrait } from "../Portrait";
 import { Socials } from "../Socials";
 import { Gallery } from "../Gallery";
+import { Map } from "../Map";
 import {
   HomeBackground,
   HomeHeader,
@@ -16,6 +17,9 @@ import {
   HomeSectionText,
   HomeSectionWrapper,
   ButtonWrapper,
+  ContactWrapper,
+  ContactSection,
+  ContactSectionWrapper,
 } from "./HomepageElements";
 
 import {
@@ -54,6 +58,13 @@ const Homepage = () => {
     Nail4,
   ];
 
+  const location = {
+    address:
+      "Av. das Letras, 1019 - Lot. Villa Branca, Jacareí - SP, 12301-330",
+    lat: -23.26519,
+    lng: -45.94284,
+  };
+
   return (
     <>
       <HomeBackground>
@@ -73,7 +84,7 @@ const Homepage = () => {
       <HomeSectionWrapper>
         <HomeSectionHeader>Serviços</HomeSectionHeader>
         <HomeSectionText>
-          Entre em contato diretamente pelo whatsapp!
+          Entre em contato diretamente pelo Whatsapp!
         </HomeSectionText>
         <HomeService>
           <ServiceInfo
@@ -129,6 +140,20 @@ const Homepage = () => {
         <HomeSectionHeader>Galeria de fotos</HomeSectionHeader>
         <Gallery image={imageList} />
       </HomeSectionWrapper>
+      <ContactWrapper>
+        <ContactSection>
+          <Map location={location} zoomLevel={17} />
+        </ContactSection>
+        <ContactSection>
+          <ContactSectionWrapper>
+            <HomeSectionHeader>Contato e endereço</HomeSectionHeader>
+            <HomeSectionText>
+              Entre em contato para agendar seu serviço ou se tiver alguma
+              dúvida!
+            </HomeSectionText>
+          </ContactSectionWrapper>
+        </ContactSection>
+      </ContactWrapper>
     </>
   );
 };
