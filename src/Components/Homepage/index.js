@@ -20,6 +20,8 @@ import {
   ContactWrapper,
   ContactSection,
   ContactSectionWrapper,
+  ContactContainer,
+  ContactSpacing,
 } from "./HomepageElements";
 
 import {
@@ -32,11 +34,14 @@ import {
   NailPolish2,
   NailStar,
   Nail,
+  Pin,
+  Mail,
+  Telephone,
 } from "../../images";
 
 import { Nail1, Nail2, Nail3, Nail4, Nail5, Nail6 } from "../../images";
 
-const Homepage = () => {
+export const Homepage = () => {
   const header = "Vanessa Pires\nNail Designer";
   const subheader = "Estética e bem estar";
   const whatsapp = "(12) 97627-0471";
@@ -147,15 +152,27 @@ const Homepage = () => {
         <ContactSection>
           <ContactSectionWrapper>
             <HomeSectionHeader>Contato e endereço</HomeSectionHeader>
-            <HomeSectionText>
+            <HomeSectionText style={{ width: "400px" }}>
               Entre em contato para agendar seu serviço ou se tiver alguma
               dúvida!
             </HomeSectionText>
+            <ContactContainer>
+              <ContactSpacing>
+                <Socials
+                  icon={Pin}
+                  text="Rua test avenue, 123, bloco 2 - Sao Paulo, Brazil"
+                />
+              </ContactSpacing>
+              <ContactSpacing>
+                <Socials icon={Telephone} text="(12) 97627-0471" />
+              </ContactSpacing>
+              <ContactSpacing>
+                <Socials icon={Mail} text="naildesigner@gmail.com" />
+              </ContactSpacing>
+            </ContactContainer>
           </ContactSectionWrapper>
         </ContactSection>
       </ContactWrapper>
     </>
   );
 };
-
-export default Homepage;

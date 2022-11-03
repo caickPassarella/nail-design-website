@@ -37,6 +37,16 @@ export const SocialsContainer = styled.div`
   margin-top: 20px;
 `;
 
+export const ContactSpacing = styled.div`
+  margin-top: 30px;
+  margin-left: 30px;
+`;
+
+export const ContactContainer = styled(SocialsContainer)`
+  width: 100%;
+  flex-direction: column;
+`;
+
 export const HomeImage = styled.img`
   height: 750px;
   transform: scaleX(-1);

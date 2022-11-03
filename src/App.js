@@ -1,12 +1,12 @@
 import "./App.css";
-import Homepage from "./Components/Homepage";
+import { Homepage } from "./Components/Homepage";
+import { Footer } from "./Components/Footer";
 
-function App() {
+export const App = () => {
   return (
     <>
       <Homepage />
+      <Footer />
     </>
   );
-}
-
-export default App;
+};
