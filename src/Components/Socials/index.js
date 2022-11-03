@@ -10,11 +10,11 @@ export const Socials = (props) => {
   return (
     <>
       <SocialWrapper>
-        <SocialLink href="/">
+        <SocialLink target="_blank" href={props.url}>
           <SocialIcon size={props.size} src={props.icon} />
         </SocialLink>
         {props.text ? (
-          <SocialLink href="/">
+          <SocialLink target="_blank" href={props.url}>
             <SocialText color={props.color} fontSize={props.fontSize}>
               {props.text}
             </SocialText>

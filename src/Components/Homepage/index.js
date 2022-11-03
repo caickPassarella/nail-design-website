@@ -5,6 +5,7 @@ import { Portrait } from "../Portrait";
 import { Socials } from "../Socials";
 import { Gallery } from "../Gallery";
 import { Map } from "../Map";
+import { getAddress, getSocialMedia, sendEmail } from "../../utils/metadata";
 import {
   HomeBackground,
   HomeHeader,
@@ -22,8 +23,8 @@ import {
   ContactSectionWrapper,
   ContactContainer,
   ContactSpacing,
+  HeaderHighlight,
 } from "./HomepageElements";
-
 import {
   Hand,
   InstagramIcon,
@@ -38,14 +39,14 @@ import {
   Mail,
   Telephone,
 } from "../../images";
-
 import { Nail1, Nail2, Nail3, Nail4, Nail5, Nail6 } from "../../images";
 
 export const Homepage = () => {
-  const header = "Vanessa Pires\nNail Designer";
+  const header = "Vanessa Pires\nNail ";
+  const headerHighlight = "Designer";
   const subheader = "Estética e bem estar";
-  const whatsapp = "(12) 97627-0471";
-  const instagram = "@naildesigntest123";
+  const whatsappText = "(12) 97627-0471";
+  const instagramText = "@naildesigntest123";
   const portraitInfo =
     "Designer with many years of experience, specially in the nails industry. I've attended more than 50 customers with all sorts of services.with many years of experience, specially in the nails industry.";
   const imageList = [
@@ -63,31 +64,35 @@ export const Homepage = () => {
     Nail4,
   ];
 
-  const location = {
-    address:
-      "Av. das Letras, 1019 - Lot. Villa Branca, Jacareí - SP, 12301-330",
-    lat: -23.26519,
-    lng: -45.94284,
-  };
+  const { location, maps } = getAddress();
+  const { whatsapp, instagram } = getSocialMedia();
+  const mail = sendEmail();
 
   return (
     <>
-      <HomeBackground>
+      <HomeBackground id="home">
         <Navbar />
         <HomeWrapper>
           <div>
-            <HomeHeader>{header}</HomeHeader>
+            <HomeHeader>
+              {header}
+              <HeaderHighlight>{headerHighlight}</HeaderHighlight>
+            </HomeHeader>
             <HomeSubheader>{subheader}</HomeSubheader>
             <SocialsContainer>
-              <Socials icon={InstagramIcon} text={instagram} />
-              <Socials icon={WhatsappIcon} text={whatsapp} />
+              <Socials
+                url={instagram}
+                icon={InstagramIcon}
+                text={instagramText}
+              />
+              <Socials url={whatsapp} icon={WhatsappIcon} text={whatsappText} />
             </SocialsContainer>
           </div>
           <HomeImage src={Hand} />
         </HomeWrapper>
       </HomeBackground>
       <HomeSectionWrapper>
-        <HomeSectionHeader>Serviços</HomeSectionHeader>
+        <HomeSectionHeader id="servicos">Serviços</HomeSectionHeader>
         <HomeSectionText>
           Entre em contato diretamente pelo Whatsapp!
         </HomeSectionText>
@@ -145,7 +150,7 @@ export const Homepage = () => {
         <HomeSectionHeader>Galeria de fotos</HomeSectionHeader>
         <Gallery image={imageList} />
       </HomeSectionWrapper>
-      <ContactWrapper>
+      <ContactWrapper id="contato">
         <ContactSection>
           <Map location={location} zoomLevel={17} />
         </ContactSection>
@@ -161,13 +166,18 @@ export const Homepage = () => {
                 <Socials
                   icon={Pin}
                   text="Rua test avenue, 123, bloco 2 - Sao Paulo, Brazil"
+                  url={maps}
                 />
               </ContactSpacing>
               <ContactSpacing>
-                <Socials icon={Telephone} text="(12) 97627-0471" />
+                <Socials
+                  url={whatsapp}
+                  icon={Telephone}
+                  text="(12) 97627-0471"
+                />
               </ContactSpacing>
               <ContactSpacing>
-                <Socials icon={Mail} text="naildesigner@gmail.com" />
+                <Socials url={mail} icon={Mail} text="naildesigner@gmail.com" />
               </ContactSpacing>
             </ContactContainer>
           </ContactSectionWrapper>

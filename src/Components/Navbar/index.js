@@ -5,21 +5,21 @@ export const Navbar = () => {
     <Nav>
       <NavUl>
         <NavLi>
-          <NavLink href="/eu">Vanessa Pires</NavLink>
+          <NavLink href="#eu">Vanessa Pires</NavLink>
         </NavLi>
       </NavUl>
       <NavUl>
         <NavLi>
-          <NavLink href="/home">Home</NavLink>
+          <NavLink href="#home">Home</NavLink>
         </NavLi>
         <NavLi>
-          <NavLink href="/servicos">Serviços</NavLink>
+          <NavLink href="#servicos">Serviços</NavLink>
         </NavLi>
         <NavLi>
-          <NavLink href="/galeria">Galeria</NavLink>
+          <NavLink href="#galeria">Galeria</NavLink>
         </NavLi>
         <NavLi>
-          <NavLink href="/contato">Contato</NavLink>
+          <NavLink href="#contato">Contato</NavLink>
         </NavLi>
       </NavUl>
     </Nav>

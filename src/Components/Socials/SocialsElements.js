@@ -14,6 +14,7 @@ export const SocialIcon = styled.img.attrs((props) => ({
 }))`
   width: ${(props) => props.size};
   margin-right: 15px;
+  cursor: pointer;
 `;
 
 export const SocialText = styled.p.attrs((props) => ({
@@ -24,4 +25,9 @@ export const SocialText = styled.p.attrs((props) => ({
   letter-spacing: 3px;
   margin-right: 55px;
   color: ${(props) => props.color};
+  cursor: pointer;
+
+  :hover {
+    font-weight: bold;
+  }
 `;

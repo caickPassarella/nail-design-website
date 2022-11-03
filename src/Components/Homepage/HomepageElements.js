@@ -26,6 +26,10 @@ export const HomeHeader = styled.h1`
   color: #333333;
 `;
 
+export const HeaderHighlight = styled.span`
+  background-color: #ffa6aa;
+`;
+
 export const HomeSubheader = styled.h2`
   font-size: 25px;
   color: #5a5a5a;

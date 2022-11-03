@@ -12,15 +12,10 @@ import {
 
 export const Portrait = (props) => {
   return (
-    <PortraitWrapper>
+    <PortraitWrapper id="eu">
       <PortraitTextWrapper>
         <PortraitHeader>{props.name}</PortraitHeader>
         <PortraitText>{props.text}</PortraitText>
-        <SocialsContainer>
-          {props.icons.map((icon, key) => {
-            return <Socials key={key} icon={icon} />;
-          })}
-        </SocialsContainer>
       </PortraitTextWrapper>
       <PortraitImgWrapper />
     </PortraitWrapper>

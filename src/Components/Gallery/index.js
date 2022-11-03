@@ -33,7 +33,7 @@ export const Gallery = (props) => {
 
   return (
     <>
-      <GallerySection>
+      <GallerySection id="galeria">
         {nPages > 1 ? (
           <GalleryIcon
             flip={true}
